@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #1da1f2;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0d8ae7;
+  transform: translateY(-2px);
+}
+
+/* Result Section */
+.result-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.result-card {
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: white;
+  border-left: 8px solid #999;
+}
+
+/* Color-coded borders */
+.result-card.positive {
+  border-left-color: #28a745;
+}
+
+.result-card.negative {
+  border-left-color: #dc3545;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #1da1f2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

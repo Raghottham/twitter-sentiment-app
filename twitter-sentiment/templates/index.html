@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Twitter Sentiment Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Twitter Sentiment Analyzer</h1>
+  </header>
+
+  <!-- Input Form -->
+  <section class="form-section">
+    <form method="POST">
+      <input type="text" name="tweet" placeholder="Enter your tweet..." required value="{{ tweet }}">
+      <button type="submit">Analyze Sentiment</button>
+    </form>
+  </section>
+
+  <!-- Result Section -->
+  {% if sentiment %}
+  <section class="result-section">
+    <div class="result-card {{ sentiment|lower }}">
+      <h2>Sentiment: {{ sentiment }}</h2>
+      <p>"{{ tweet }}"</p>
+    </div>
+  </section>
+  {% endif %}
+  
+<footer>
+  <p>🚀 Powered by Machine Learning | 💬 Real-time Tweet Sentiment Detection | 🔍 Built using Flask</p>
+</footer>
+
+
+</body>
+</html>
